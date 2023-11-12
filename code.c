@@ -7,7 +7,7 @@ struct library {
     char author[20];
     int pages;
     float price;
-    char book_genre[20];
+    char genre[20];
 
 };
 
@@ -69,12 +69,13 @@ void AddBook(){
         printf("Enter the book's price :");
         scanf("%f", lib[i].price);
         printf("Enter the book's genre :");
-        scanf("%s", lib[i].book_genre);
+        scanf("%s", lib[i].genre);
         count++;}
+        }
     else { 
         printf("Library is full!\n");}
-        }
 }
+
 
 void SearchByAuthor(){
     char auth[20];
@@ -86,7 +87,7 @@ void SearchByAuthor(){
             printf("Book's name: %s\n", lib[i].book_name);
             printf("Book's pages: %d\n", lib[i].pages);
             printf("Book's price: %f\n", lib[i].price);
-            printf("Book's genre: %s\n", lib[i].book_genre);
+            printf("Book's genre: %s\n", lib[i].genre);
             printf("---------------------------\n");
             authorFound = 1;
         }  
@@ -107,7 +108,7 @@ void SearchByGenre(){
             printf("Book's name: %s\n", lib[i].book_name);
             printf("Book's pages: %d\n", lib[i].pages);
             printf("Book's price: %f\n", lib[i].price);
-            printf("Book's genre: %s\n", lib[i].book_genre);
+            printf("Book's genre: %s\n", lib[i].genre);
             printf("---------------------------\n");
             genreFound = 1;
         }  
